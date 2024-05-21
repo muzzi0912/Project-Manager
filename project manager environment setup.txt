@@ -1,0 +1,66 @@
+go to https://console.firebase.google.com/u/0/project/_/settings/serviceaccounts/adminsdk
+create account 
+download.json file
+
+-------- FOR SERVICE OR BACKEND ----------
+go to service folder
+create firebaseConfig.json file
+paste downloaded .json file code in firebaseConfig.json file
+
+looks like this
+ 
+ "type": "service_account",
+ "project_id": "",
+ "private_key_id": "",
+ "private_key": "",
+ "client_email": "",
+ "client_id": "",
+ "auth_uri": "",
+ "token_uri": "",
+ "auth_provider_x509_cert_url": "",
+ "client_x509_cert_url": ""
+}
+
+download node v14.21.3
+run these commands
+npm i --legacy-peer-deps
+npm i -g serverless
+
+create .env file
+add these two variable
+
+DATABASE_URL="FIREBASE_REALTIMEDATABASE_URL"
+SLS_DEBUG=*
+
+create realtime database in firebase 
+then copy the url and paste .env file
+
+now run this command
+npx serverless offline
+-------- FOR SERVICE OR BACKEND ----------
+
+-------- FOR CLIENT OR FRONTEND ----------
+Go to client folder
+
+create .env file
+and paste these variable
+
+REACT_APP_API_KEY=
+REACT_APP_AUTH_DOMAIN=
+REACT_APP_DB_URL=
+REACT_APP_PROJECT_ID=
+REACT_APP_STORAGE_BUCKET=
+REACT_APP_MESSAGING_SENDER_ID=
+REACT_APP_APP_ID=
+REACT_APP_MEASUREMENT_ID=
+REACT_APP_SERVICE_URL=
+REACT_APP_UNSPLASH_ACCESS_KEY=
+
+now go firebase and create web project configuration
+
+and paste all api key and url from web project configuration
+
+now run these commands
+npm i --legacy-peer-deps
+npm start
+-------- FOR CLIENT OR FRONTEND ----------
