@@ -6,6 +6,7 @@ export const CreateNewBoard = (boardData) =>
         headers: new Headers({
           "Content-type": "application/json; charset=UTF-8",
         }),
+        
         body: JSON.stringify(boardData),
       });
       resolve(await response.json());
